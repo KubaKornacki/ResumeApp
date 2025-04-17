@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/Resume/Resume.Application" # œcie¿ka do .csproj w aplikacji
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "nuget"
+    directory: "/Resume/Resume.Domain" # œcie¿ka do .csproj w domenie
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "nuget"
+    directory: "/ResumeApp.Persistance" # œcie¿ka do .csproj w persystencji
+    schedule:
+      interval: "weekly"
