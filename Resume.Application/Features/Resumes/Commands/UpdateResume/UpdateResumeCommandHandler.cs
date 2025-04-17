@@ -23,10 +23,10 @@ namespace ResumeApp.Application.Features.Resumes.Commands.UpdateResume
         }
         public async Task Handle(UpdateResumeCommand request, CancellationToken cancellationToken)
         {
-            var resumeToUpdate = await _resumeRepository.GetByIdAsync(request.Id);
+            var resumeToUpdate = await _resumeRepository.GetByIdAsync(request.ResumeId);
 
             if (resumeToUpdate is null)
-                throw new NotFoundException(nameof(Resume), request.Id);
+                throw new NotFoundException(nameof(Resume), request.ResumeId);
 
             var validator = new UpdateResumeCommandValidator();
 
